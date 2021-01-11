@@ -1,0 +1,37 @@
+
+#include <bits/stdc++.h>
+
+using namespace std;
+
+void arrayRev(int arr[])
+{
+    int temp;
+    for (int i = 0; i < 7/2; i++)
+    {
+        //swap item arr[i] with arr[6-i]
+        temp = arr[i]; 
+        arr[i] = arr[6-i];
+        arr[6-i] = temp;
+    }
+}
+
+void arrayPrint(int arr[])
+{
+    for (int i = 0; i < 7; i++)
+    {
+        cout<<"The value of element"<<i<<" is "<<arr[i]<<endl;
+    }
+}
+int main()
+{
+    int arr[] = {1,2,3,4,5,6,67};
+    // printf("Before reversing the array\n");
+    cout<<"\n"<<"Before reversing the array"<<"\n"<<endl;
+    arrayPrint(arr);
+    arrayRev(arr);
+    cout<<"\n"<<"After reversing the array"<<"\n"<<endl;
+    arrayPrint(arr);
+    
+    
+    return 0;
+}
